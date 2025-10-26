@@ -4,6 +4,9 @@ node_modules/
 # Build output
 dist/
 
+# Scripts (optional - uncomment if you want to keep them private)
+# scripts/
+
 # Environment
 .env
 .env.local

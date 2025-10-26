@@ -17,11 +17,13 @@ pnpm install
 
 ### Development
 
-Run the development server with hot reload:
+Run the development server with an interactive file selector:
 
 ```bash
 pnpm dev
 ```
+
+This will prompt you to select which TypeScript file you want to run. It automatically finds all `.ts` files in the `src/` directory and runs the selected file with hot reload.
 
 ### Build
 
@@ -51,15 +53,21 @@ pnpm clean
 
 ```
 ├── src/           # Source TypeScript files
-├── dist/          # Compiled JavaScript output
-├── tsconfig.json  # TypeScript configuration
-└── package.json   # Dependencies and scripts
+│   ├── index.ts                    # Main entry point
+│   └── problems/                   # Your DSA practice problems
+│       └── 2-big-o/               # Example: Big O notation section
+├── scripts/        # Helper scripts
+│   └── dev-select.ts              # Interactive file selector
+├── dist/           # Compiled JavaScript output
+├── tsconfig.json    # TypeScript configuration
+└── package.json     # Dependencies and scripts
 ```
 
 ## Features
 
 - ✅ TypeScript with strict type checking
 - ✅ Node.js environment
+- ✅ Interactive file selector for development
 - ✅ Hot reload with tsx
 - ✅ TypeScript compiler for production builds
 - ✅ pnpm package manager
