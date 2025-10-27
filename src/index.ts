@@ -1,23 +1,23 @@
 function checkCount(str: string) {
-  if (str.length === 0) return
+  if (str.length === 0) return;
   // loop through the string
   // capture distinct items which are characters only
-  const result: Record<string, number> = {}
-  for (let char of str) {
+  const result: Record<string, number> = {};
+  for (const char of str) {
     if (
       !char ||
       char.trim().length === 0 ||
       char.replace(/[^a-zA-Z]/g, '').length === 0
     )
-      continue
+      continue;
 
     if (char.toLowerCase() in result) {
-      result[char.toLowerCase()]! += 1
+      result[char.toLowerCase()]! += 1;
     } else {
-      result[char.toLowerCase()] = 1
+      result[char.toLowerCase()] = 1;
     }
   }
-  return result
+  return result;
 }
 
-console.log(checkCount('tmmma.a;sd.asdhisisM m a23423eandmine'))
+console.log(checkCount('tmmma.a;sd.asdhisisM m a23423eandmine'));
