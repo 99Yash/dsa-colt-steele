@@ -3,9 +3,7 @@
     // Target modern JavaScript
     "target": "ES2022",
     "module": "ESNext",
-    "lib": [
-      "ES2022"
-    ],
+    "lib": ["ES2022"],
     "moduleResolution": "bundler",
     // Output configuration
     "rootDir": "./src",
@@ -13,9 +11,7 @@
     "sourceMap": true,
     "declaration": true,
     // Node.js specific
-    "types": [
-      "node"
-    ],
+    "types": ["node"],
     // Strict type checking
     "strict": true,
     "noUncheckedIndexedAccess": true,
@@ -31,11 +27,6 @@
     "isolatedModules": true,
     "resolveJsonModule": true
   },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
 }
