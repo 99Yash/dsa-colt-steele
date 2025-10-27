@@ -22,6 +22,8 @@ dist/
 .DS_Store
 Thumbs.db
 
+.pnpm-store/
+
 # Logs
 *.log
 logs/
