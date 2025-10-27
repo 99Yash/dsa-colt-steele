@@ -1,21 +1,25 @@
-/**
- * Main entry point for DSA practice with Colt Steele's algorithms
- */
+function checkCount(str: string) {
+  if (str.length === 0) return;
+  // loop through the string
+  // capture distinct items which are characters only
+  const result: Record<string, number> = {};
+  for (let i = 0; i < str.length; i++) {
+    const char = str[i];
 
-console.log('Hello, DSA Practice!');
+    if (
+      !char ||
+      char.trim().length === 0 ||
+      char.replace(/[^a-zA-Z]/g, '').length === 0
+    )
+      continue;
 
-// Example: Basic array manipulation
-function reverseArray<T>(arr: T[]): T[] {
-  const reversed: T[] = [];
-  for (let i = arr.length - 1; i >= 0; i--) {
-    reversed.push(arr[i]);
+    if (char.toLowerCase() in result) {
+      result[char.toLowerCase()]! += 1;
+    } else {
+      result[char.toLowerCase()] = 1;
+    }
   }
-  return reversed;
+  return result;
 }
 
-// Test it out
-const numbers = [1, 2, 3, 4, 5];
-const reversed = reverseArray(numbers);
-
-console.log('Original:', numbers);
-console.log('Reversed:', reversed);
+console.log(checkCount('tmmma.a;sd.asdhisisM m a23423eandmine'));
