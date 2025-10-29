@@ -11,10 +11,8 @@ function countUniqueValues(arr: number[]) {
     if (arr[left]! < arr[right]!) {
       left++;
       arr[left] = arr[right]!;
-      right++;
-    } else if (arr[left] === arr[right]) {
-      right++;
     }
+    right++;
   }
   return left + 1;
 }
