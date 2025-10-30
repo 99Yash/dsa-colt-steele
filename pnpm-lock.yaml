@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      node:
+        specifier: ^25.1.0
+        version: 25.1.0
     devDependencies:
       '@eslint/js':
         specifier: ^9.38.0
@@ -845,6 +849,14 @@ packages:
 
   natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
+
+  node-bin-setup@1.1.4:
+    resolution: {integrity: sha512-vWNHOne0ZUavArqPP5LJta50+S8R261Fr5SvGul37HbEDcowvLjwdvd0ZeSr0r2lTSrPxl6okq9QUw8BFGiAxA==}
+
+  node@25.1.0:
+    resolution: {integrity: sha512-nYC3Zsz3ZQHGbBQrU8OAf63Qwhgptf352vQLGXVES2dL22QRrwjGzkuGS+C4FJ1b0awisMEe2tuPU87MDwj61A==}
+    engines: {npm: '>=5.0.0'}
+    hasBin: true
 
   nodemon@3.1.10:
     resolution: {integrity: sha512-WDjw3pJ0/0jMFmyNDp3gvY2YizjLmmOUQo6DEBY+JgdvW/yQ9mEeSw6H5ythl5Ny2ytb7f9C2nIbjSxMNzbJXw==}
@@ -1812,6 +1824,12 @@ snapshots:
   mute-stream@2.0.0: {}
 
   natural-compare@1.4.0: {}
+
+  node-bin-setup@1.1.4: {}
+
+  node@25.1.0:
+    dependencies:
+      node-bin-setup: 1.1.4
 
   nodemon@3.1.10:
     dependencies:
