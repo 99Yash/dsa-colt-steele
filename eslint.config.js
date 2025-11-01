@@ -66,7 +66,7 @@ export default [
     },
   },
   {
-    files: ['*.js', 'scripts/**/*.{js,ts}'],
+    files: ['*.js', 'scripts/**/*.js'],
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: 'module',
@@ -81,6 +81,41 @@ export default [
         global: 'readonly',
         NodeJS: 'readonly',
       },
+    },
+  },
+  {
+    files: ['scripts/**/*.ts'],
+    languageOptions: {
+      parser: tsparser,
+      parserOptions: {
+        ecmaVersion: 2022,
+        sourceType: 'module',
+      },
+      globals: {
+        console: 'readonly',
+        process: 'readonly',
+        Buffer: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        global: 'readonly',
+        NodeJS: 'readonly',
+      },
+    },
+    plugins: {
+      '@typescript-eslint': tseslint,
+    },
+    rules: {
+      // TypeScript specific rules for scripts
+      '@typescript-eslint/no-unused-vars': [
+        'warn',
+        {
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          ignoreRestSiblings: true,
+        },
+      ],
     },
   },
   prettierConfig,
