@@ -15,8 +15,6 @@ function maxSubarraySum(arr: number[], n: number): number | null {
 
     const s = arr.slice(i, j + 1); // WHY j+1 and not j: end (optional): The index before which to end extraction (the element at this index will not be included). If omitted, the slice extends to the end of the array. Negative indices count from the end of the array.
 
-    console.log(s);
-
     const sum = s.reduce(
       (accumulator, currentValue) => accumulator + currentValue,
       0
