@@ -1,22 +1,19 @@
 //Given an array of positive integers, some elements appear twice and others appear once. Find all the elements that appear twice in this array. Note that you can return the elements in any order.
 //Time Complexity - O(n)
 
+//TODO: Try again
 function findAllDuplicates(arr: number[]) {
-  const result = new Set<number>();
-  let l = 0;
-  let r = 1;
+  if (arr.length === 0) return [];
 
-  while (r < arr.length) {
-    if (arr[l] === arr[r]) {
-      result.add(arr[l]!);
-      l++;
-    }
-    r++;
+  const ans = [];
+
+  const result = new Set<number>();
+
+  for (let i = 0; i < arr.length; i++) {
+    result.has(arr[i]!) ? ans.push(arr[i]) : result.add(arr[i]!);
   }
 
-  if (result.size === 0) return [];
-
-  return Array.from(result);
+  return ans;
 }
 
 console.log(
