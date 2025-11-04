@@ -1,22 +1,21 @@
-// /Write a recursive function called nestedEvenSum. Return the sum of all even numbers in an object which may contain nested objects.
+// Write a recursive function called nestedEvenSum. Return the sum of all even numbers in an object which may contain nested objects.
 
-function nestedEvenSum(ob: object) {
+// Type guard to check if value is a plain object (not array, function, etc.)
+function isPlainObject(value: unknown): value is Record<string, unknown> {
+  return value !== null && typeof value === 'object' && !Array.isArray(value);
+}
+
+//TODO: try again
+function nestedEvenSum(ob: Record<string, unknown>): number {
   let s = 0;
-  if (Object.keys(ob).length === 0) return s;
-
-  function helper(obj: object) {
-    const val = Object.values(obj).at(0);
-    if (typeof val === 'number') {
-      const isEven = val % 2 === 0;
-
-      isEven ? (s += val) : s;
-      //if not a number, if an object, then grab the value (object2) and recurse
-    } else if (typeof val === 'object' && val !== null) {
-      return s + nestedEvenSum(val);
-    } else return s;
+  for (const key in ob) {
+    const value = ob[key];
+    if (typeof value === 'number' && value % 2 === 0) {
+      s += value;
+    } else if (isPlainObject(value)) {
+      s += nestedEvenSum(value);
+    }
   }
-
-  helper(ob);
 
   return s;
 }
