@@ -1,6 +1,6 @@
 # DSA Practice - Colt Steele
 
-A TypeScript project for practicing data structures and algorithms, based on Colt Steele's teachings.
+A comprehensive TypeScript repository for practicing data structures and algorithms, based on Colt Steele's curriculum. Covers algorithms, data structures, and problem-solving patterns.
 
 ## Getting Started
 
