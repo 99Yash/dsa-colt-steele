@@ -1,4 +1,23 @@
-//TODO: try again
+/**
+ * SELECTION SORT
+ *
+ * How it works:
+ * 1. Find the minimum element in the unsorted portion of the array
+ * 2. Swap it with the first element of the unsorted portion
+ * 3. Move the boundary between sorted and unsorted portions one element to the right
+ * 4. Repeat the process for the remaining unsorted portion
+ * 5. Continue until the entire array is sorted
+ *
+ * Time Complexity: O(n²) - always, even in best case
+ * Space Complexity: O(1) - in-place sorting
+ * Stable: No (can change relative order of equal elements)
+ *
+ * Characteristics:
+ * - Simple to implement and understand
+ * - Performs poorly on large datasets
+ * - Makes the minimum number of swaps (at most n-1 swaps)
+ * - Not adaptive - doesn't take advantage of existing order
+ */
 function selectionSort(arr: number[]) {
   if (arr.length === 0 || arr.length === 1) return arr;
 

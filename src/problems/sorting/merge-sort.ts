@@ -1,3 +1,21 @@
+/**
+ * MERGE SORT - Divide and Conquer Algorithm
+ *
+ * How it works:
+ * 1. Divide the unsorted array into two halves recursively
+ * 2. Continue dividing until each subarray has 1 or 0 elements (base case)
+ * 3. Merge the sorted subarrays back together using the merge function
+ * 4. The merge function compares elements from both arrays and builds a sorted result
+ *
+ * Time Complexity: O(n log n) - always, even in worst case
+ * Space Complexity: O(n) - requires additional space for merging
+ * Stable: Yes
+ *
+ * Advantages: Predictable performance, good for large datasets, stable
+ * Disadvantages: Uses extra space, slower for small arrays
+ *
+ * The merge function combines two sorted arrays into one sorted array.
+ */
 function merge(
   arr1: number[],
   arr2: number[],

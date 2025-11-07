@@ -1,4 +1,23 @@
-//TODO: try again
+/**
+ * QUICK SORT - Divide and Conquer Algorithm
+ *
+ * How it works:
+ * 1. Choose a pivot element (first element in this implementation)
+ * 2. Partition the array: elements smaller than pivot go left, larger go right
+ * 3. Recursively sort the left partition (elements < pivot)
+ * 4. Recursively sort the right partition (elements > pivot)
+ * 5. The pivot ends up in its final sorted position
+ *
+ * Time Complexity: O(n log n) average case, O(n²) worst case
+ * Space Complexity: O(log n) due to recursion stack
+ * Stable: No
+ * In-place: Yes (this implementation)
+ *
+ * The pivotHelper function:
+ * - Selects a pivot and partitions the array around it
+ * - Returns the final index of the pivot element
+ * - All elements left of pivot are smaller, right are larger
+ */
 function pivotHelper(arr: number[], start: number, end: number) {
   if (start >= arr.length) start = 0;
   if (end >= arr.length) end = arr.length - 1;

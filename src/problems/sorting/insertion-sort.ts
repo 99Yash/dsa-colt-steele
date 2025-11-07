@@ -1,4 +1,21 @@
-//TODO: Try again
+/**
+ * INSERTION SORT
+ *
+ * How it works:
+ * 1. Start with the second element (index 1) - consider first element as sorted
+ * 2. For each element, compare it with elements before it
+ * 3. Shift larger elements to the right to make space
+ * 4. Insert the current element in its correct position in the sorted portion
+ * 5. Repeat until all elements are in their correct positions
+ *
+ * Time Complexity: O(n²) worst/average case, O(n) best case (nearly sorted)
+ * Space Complexity: O(1) - in-place sorting
+ * Stable: Yes
+ * Adaptive: Yes - performs well on nearly sorted data
+ *
+ * Analogy: Like sorting playing cards in your hand - pick each card and insert it
+ * in the correct position among the cards you're already holding.
+ */
 function insertionSort(
   arr: number[],
   compareFn?: (s: number, t: number) => number

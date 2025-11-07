@@ -1,3 +1,19 @@
+/**
+ * BUBBLE SORT - Basic Implementation
+ *
+ * How it works:
+ * 1. Compare adjacent elements in the array
+ * 2. Swap them if they're in the wrong order (larger element bubbles up)
+ * 3. Repeat for each pair in the array
+ * 4. After each pass, the largest element is in its correct position
+ * 5. Repeat the process for the remaining unsorted portion
+ *
+ * Time Complexity: O(n²) - nested loops
+ * Space Complexity: O(1) - in-place sorting
+ * Stable: Yes
+ *
+ * Optimization: Early termination if no swaps occur in a pass
+ */
 function bubbleSortBasic(arr: number[]) {
   //compare the first 2,
   // swap if applicable

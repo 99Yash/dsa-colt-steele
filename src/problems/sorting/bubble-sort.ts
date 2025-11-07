@@ -1,24 +1,24 @@
-/*
-ATTEMPT THIS IS YOU ARE UP FOR IT! Implement a function called bubbleSort. Given an array, bubbleSort will sort the values in the array. The function takes 2 parameters: an array and an optional comparator function.
-
-function bubbleSort(arr, comparator) {
-  if (typeof comparator !== 'function') {
-    provide a default
-  }
-}
-The comparator function is a callback that will take two values from the array to be compared. The function returns a negative value if the first value is less than the second, a positive value if the first value is greater than the second, and 0 if both values are equal.
-
-The default comparator you provide should assume that the two parameters are numbers and that we are sorting the values from smallest to largest.
-
-Bubble sort is an O(n^2) algorithm. You can read more about it here: https://www.rithmschool.com/courses/javascript-computer-science-fundamentals/basic-sorting-algorithms
-
-Examples
-
-bubbleSort([4, 20, 12, 10, 7, 9]); // [4, 7, 9, 10, 12, 20]
-bubbleSort([0, -10, 7, 4]); // [-10, 0, 4, 7]
-bubbleSort([1, 2, 3]); // [1, 2, 3]
-bubbleSort([]);
-*/
+/**
+ * BUBBLE SORT - Advanced Implementation with Custom Comparator
+ *
+ * How it works:
+ * 1. Compare adjacent elements in the array using a comparator function
+ * 2. Swap them if comparator indicates they're in the wrong order
+ * 3. Repeat for each pair in the array (larger elements "bubble up")
+ * 4. After each pass, the largest element is in its correct position
+ * 5. Repeat the process for the remaining unsorted portion
+ *
+ * Time Complexity: O(n²) - nested loops
+ * Space Complexity: O(1) - in-place sorting
+ * Stable: Yes
+ *
+ * Features:
+ * - Accepts custom comparator function for flexible sorting
+ * - Default comparator sorts numbers ascending
+ * - Early termination optimization if no swaps occur
+ *
+ * Comparator function: returns negative if a < b, positive if a > b, 0 if equal
+ */
 
 function bubbleSort(
   arr: number[],
