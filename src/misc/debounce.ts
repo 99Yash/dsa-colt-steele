@@ -21,14 +21,16 @@
 // cancel D
 // timer E
 
-function debounce<T extends Function>(func: Function, time: number) {
+//<T extends Function> will only work for something that has no params.
+
+function debounce<T extends (...args: any[]) => any>(func: T, time: number) {
   let timeout: ReturnType<typeof setTimeout>;
 
-  return function () {
+  return function (...args: Parameters<T>) {
     clearTimeout(timeout);
 
     timeout = setTimeout(() => {
-      func();
+      func(...args);
     }, time);
   };
 }
